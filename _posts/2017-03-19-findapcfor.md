@@ -12,6 +12,12 @@ findapcfor.me is a web app for finding available computers at The University of 
 
 The university tracks the status of PC clusters in an XML file.
 
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
 ## Check out the code on GitHub
 
 [findapcfor.me on GitHub](http://github.com/hamishll/findapcfor.me)
