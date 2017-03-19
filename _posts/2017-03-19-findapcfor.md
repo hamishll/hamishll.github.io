@@ -8,13 +8,10 @@ categories: posts
 
 ## Introduction
 
-findapcfor.me is a web app for finding available computers at The University of Manchester. It uses:
+findapcfor.me is a web app for finding available computers at The University of Manchester. It uses AJAX alongside the Google Maps API in order to map...
 
- * AJAX
- * Google Maps API
- * An XML document hosted by the university
+The university tracks the status of PC clusters in an XML file.
 
+## Check out the code on GitHub
 
-## Open Sourced on GitHub
-
-[MIT License](http://opensource.org/licenses/MIT)
+[findapcfor.me on GitHub](http://github.com/hamishll/findapcfor.me)
