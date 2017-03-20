@@ -47,11 +47,21 @@ function downloadUrl(url,callback) {
     request.send(null);
 }
 {% endhighlight %}
-
+  
 We can then call each row in the table by refering to the DOM and using the getElementsByTagName method. For example:
 
 {% highlight js %}
 var name = markers[i].getElementsByTagName("name")[0].innerHTML;
+{% endhighlight %}
+
+## Initialising our google map
+
+Let's create a new map with coordinates centered on University Place:
+
+{% highlight js %}
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: {lat: 53.469369, lng: -2.233706}
 {% endhighlight %}
 
 ## Styling markers based on availability
@@ -80,6 +90,7 @@ if (free < (dangerZone/2)) {
 }
 var markerColor = rgbToHex(rCol, gCol, 0);
 {% endhighlight %}
+
 
 The rgbToHex function at the end converts this RGB value to a hex (which is the color format used by the google maps API).
 
