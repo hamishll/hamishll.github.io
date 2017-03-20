@@ -152,7 +152,7 @@ We'll push the markers to the map as such:
 {% highlight js %}
 map.markers.push(marker);
 {% endhighlight %}
-'''test'''
+```test```
 HTML boxes are a little trickier, as we need to listen for interaction through clicking. We'll use the following function:
 
 {% highlight js %}
