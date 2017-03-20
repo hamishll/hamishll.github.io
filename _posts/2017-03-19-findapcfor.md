@@ -47,7 +47,7 @@ function downloadUrl(url,callback) {
     request.send(null);
 }
 {% endhighlight %}
-  
+<br />  
 We can then call each row in the table by refering to the DOM and using the getElementsByTagName method. For example:
 
 {% highlight js %}
@@ -99,7 +99,7 @@ if (free < (dangerZone/2)) {
 var markerColor = rgbToHex(rCol, gCol, 0);
 {% endhighlight %}
 
-
+<br />
 The rgbToHex function at the end converts this RGB value to a hex (which is the color format used by the google maps API).
 
 ## Determining marker size
@@ -152,7 +152,7 @@ We'll push the markers to the map as such:
 {% highlight js %}
 map.markers.push(marker);
 {% endhighlight %}
-```test```
+<br />
 HTML boxes are a little trickier, as we need to listen for interaction through clicking. We'll use the following function:
 
 {% highlight js %}
