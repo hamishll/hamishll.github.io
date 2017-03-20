@@ -51,7 +51,15 @@ function downloadUrl(url,callback) {
 We can then call each row in the table by refering to the DOM and using the getElementsByTagName method. For example:
 
 {% highlight js %}
-var name = markers[i].getElementsByTagName("name")[0].innerHTML;
+// store the elements for each place
+markers = xml.documentElement.getElementsByTagName("PLPlace");
+
+// loop through each location (and plot markers)
+for (var i = 0; i < markers.length; i++) {
+	var name = markers[i].getElementsByTagName("name")[0].innerHTML;
+	...
+	// rest of the code
+}
 {% endhighlight %}
 
 ## Initialising our google map
@@ -109,10 +117,55 @@ var circle = {
 };
 {% endhighlight %}
 
-
-## Check out the code on GitHub
+## Getting coordinates
 
 {% highlight js %}
+ var point = new google.maps.LatLng(
+    parseFloat(markers[i].getElementsByTagName("latitude")[0].innerHTML) + deltax,
+    parseFloat(markers[i].getElementsByTagName("longitude")[0].innerHTML) + deltay);
 {% endhighlight %}
+
+## Placing markers and infoboxes
+
+The google maps API have two objects for displaying content - markers and info boxes. We'll format them as such:
+
+{% highlight js %}
+var html = "<div class='infowindow'><b>" + name + "</b><br/>" + address  + "</b><br/>" + availability + '<br/></div>';
+var marker = new google.maps.Marker({
+  map: map,
+  position: point,
+  icon: circle,
+  title: name,
+  label: {
+    text: free,
+    color: 'white',
+  },
+  // clusters with greater availability have a higher zIndex
+  zIndex: parseInt(free),
+});
+{% endhighlight %}
+
+## Pushing objects to the map
+
+We'll push the markers to the map as such:
+
+{% highlight js %}
+map.markers.push(marker);
+{% endhighlight %}
+
+HTML boxes are a little trickier, as we need to listen for interaction through clicking. We'll use the following function:
+
+{% highlight js %}
+function bindInfoWindow(marker, map, infoWindow, html) {
+  google.maps.event.addListener(marker, 'click', function() {
+    infoWindow.setContent(html);
+    infoWindow.open(map, marker);
+  });
+}
+{% endhighlight %}
+           
+## Conclusion
+
+Check out the code on GitHub:
 
 [findapcfor.me on GitHub](http://github.com/hamishll/findapcfor.me)
