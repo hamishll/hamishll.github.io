@@ -167,5 +167,4 @@ function bindInfoWindow(marker, map, infoWindow, html) {
 ## Conclusion
 
 Check out the code on GitHub:
-
 [findapcfor.me on GitHub](http://github.com/hamishll/findapcfor.me)
