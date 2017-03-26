@@ -48,6 +48,18 @@
       </div>
 
         {{ content }}
+        <!--could replace this with homepage stuff
+		{% for post in site.posts %}
+              <div class="post-index">
+                <a class="post-title" href="{{ post.url }}">
+                  <span class="post-date">{{ post.date | date_to_string }}</span>
+                  {{ post.title }}
+                  <img src="{{ site.url }}/images/{{ post.cover }}">
+                </a>
+
+              </div>
+{% endfor %}
+        -->
 
     </div>
     <script src="/scripts/responsive.js" type="text/javascript"></script>
