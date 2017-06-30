@@ -4,7 +4,7 @@
   }
 
   .header {
-    padding-top: 3.45em;
+    /*padding-top: 3.45em;*/
   }
 
   .posts {
@@ -27,7 +27,7 @@
   }
 
   .header {
-    padding-top: 3.85em;
+    /*padding-top: 3.85em;*/
   }
 
   .posts {
@@ -35,7 +35,7 @@
   }
 
   .sidebar {
-    padding-left: 4em;
+    padding-left: 2.125em;
   }
 
   .content {
