@@ -224,8 +224,8 @@ a:hover {
 .sidebar {
   background: #f3f3f3;
   float: left;
-  width: 14%;
-  /*padding-left: 11em;*/
+  /*width: 14%;*/
+  padding-left: 2.125em;
   padding-right: 2.125em;
   /*border-right: 1px solid #e7e7e7;*/
 }
@@ -236,7 +236,7 @@ a:hover {
 
 .header {
   text-align: center;
-  /*padding-top: 2.5em;*/
+  padding-top: 2.125em;
   font-size: 1.1em;
 }
 

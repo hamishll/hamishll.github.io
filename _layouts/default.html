@@ -49,8 +49,11 @@
         </div>
       </div>
 
-      <!-- Main Content -->
+      <!-- Main Content-->
         {{ content }}
+      
+
+        <!-- must place this before content
 		      {% for post in site.posts %}
               <div class="post-index">
                 <a class="post-title" href="{{ post.url }}">
@@ -59,7 +62,7 @@
                   <img src="{{ site.url }}/images/{{ post.cover }}">
                 </a>
               </div>
-          {% endfor %}
+          {% endfor %}-->
 
     </div>
     <script src="/scripts/responsive.js" type="text/javascript"></script>
